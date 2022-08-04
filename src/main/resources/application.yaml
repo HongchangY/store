@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    # 配置数据源信息
+    type: com.zaxxer.hikari.HikariDataSource
+    # 配置连接数据库
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/store?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+  jackson:
+    # 服务器向客户端不响应为null的属性
+    default-property-inclusion: non_null
+
+mybatis-plus:
+  configuration:
+    # 配置mybatis-plus日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
